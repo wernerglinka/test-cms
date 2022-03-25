@@ -6,8 +6,84 @@
     <title>Netlify CMS</title>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@^16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/netlify-cms-app/dist/netlify-cms-app.js"></script>
+    <script>
+      // This global flag enables manual initialization.
+      window.CMS_MANUAL_INIT = true;
+      NetlifyCmsApp.init({
+        config: {
+          backend: {
+            name: 'git-gateway',
+            branch: 'main'
+          },
+          local_backend: {
+            url: 'http://localhost:3002/api/v1'
+          },
+          publish_mode: 'editorial_workflow',
+          media_folder: "src/assets/images",
+          public_folder: "assets/images",
+          collections: {
+            name: 'pages',
+            label: 'Pages',
+            folder: 'src/content/',
+            create: 'true',
+            slug: '{{slug}}',
+            fields: [
+              {
+                label: 'Layout',
+                name: 'layout',
+                widget: 'hidden',
+                default: 'blog-post.njk'
+              },
+              {
+                label: 'Body Class',
+                name: 'bodyClass',
+                widget: 'string',
+                required: false
+              },
+              {
+                label: 'SEO',
+                name: 'seo',
+                widget: 'object',
+                summary: 'SEO Properties',
+                fields: [
+                  {
+                    label: 'Title',
+                    name: 'title',
+                    widget: 'string'
+                  },
+                  {
+                    label: 'Description',
+                    name: 'description',
+                    widget: 'string'
+                  },
+                  {
+                    label: 'Social Image',
+                    name: 'socialImage',
+                    widget: 'image',
+                    required: false
+                  },
+                  {
+                    label: 'Canonical Overwrite',
+                    name: 'canonicalOverwrite',
+                    widget: 'string',
+                    required: false
+                  },
+                ]
+              },
+              {
+                label: 'Body',
+                name: 'body',
+                widget: 'markdown',
+                required: false
+              },
+            ]
+          }
+        }
+      });
+    </script>
     <!-- Include Netlify Identity for authentication -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script type="module" src="./templates/index.js"></script>
