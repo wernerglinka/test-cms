@@ -6,8 +6,8 @@ seo:
   description: Etiam porta sem malesuada magna mollis euismod.
   socialImage: assets/images/metalsmith-starter-social.png
   canonicalOverwrite: ""
-blogTitle: Duis mollis, est non commodo luctus
-date: 2020-03-10T11:00:00Z
+blogTitle: "Duis mollis, est non commodo luctus"
+date: 2020-03-10T12:00:00Z
 author: ""
 image: /assets/images/blog1.jpg
 featuredBlogpost: true

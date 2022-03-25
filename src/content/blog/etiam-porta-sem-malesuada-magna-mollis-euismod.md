@@ -1,15 +1,13 @@
 ---
 layout: blog-post.njk
 bodyClass: "blog-post"
-
 seo:
   title: Etiam porta sem malesuada magna mollis euismod.
   description: "Etiam porta sem malesuada magna mollis euismod."
   socialImage: "https://res.cloudinary.com/glinkaco/image/upload/v1646849499/tgc2022/social_yitz6j.png"
   canonicalOverwrite: ""
-
 blogTitle: "Etiam porta sem malesuada magna mollis euismod."
-date: "2021-03-10T12:00:00Z"
+date: 2021-03-10T12:00:00Z
 author: ""
 image: "/assets/images/blog3.jpg"
 featuredBlogpost: true

@@ -1,15 +1,13 @@
 ---
 layout: blog-post.njk
 bodyClass: "blog-post"
-
 seo:
   title: Ipsum Cras Ullamcorper Fringilla
   description: "Etiam porta sem malesuada magna mollis euismod."
   socialImage: "https://res.cloudinary.com/glinkaco/image/upload/v1646849499/tgc2022/social_yitz6j.png"
   canonicalOverwrite: ""
-
 blogTitle: "Ipsum Cras Ullamcorper Fringilla"
-date: "2020-05-10T12:00:00Z"
+date: 2020-05-10T12:00:00Z
 author: ""
 image: "/assets/images/blog4.jpg"
 featuredBlogpost: true
