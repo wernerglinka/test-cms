@@ -6,13 +6,11 @@
     <title>Netlify CMS</title>
   </head>
   <body>
-    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@^16/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/netlify-cms-app/dist/netlify-cms-app.js"></script>
+    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
     <script>
       // This global flag enables manual initialization.
       window.CMS_MANUAL_INIT = true;
-      NetlifyCmsApp.init({
+      CMS.init({
         config: {
           backend: {
             name: 'git-gateway',
@@ -29,7 +27,7 @@
               name: 'pages',
               label: 'Pages',
               folder: 'src/content/',
-              create: 'true',
+              create: true,
               slug: '{{slug}}',
               fields: [
                 {
